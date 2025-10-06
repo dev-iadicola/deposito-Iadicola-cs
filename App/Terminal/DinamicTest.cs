@@ -63,7 +63,7 @@ class DinamicTest
         this.dinamic = new Dinamic<int>();
         this.dinamic.Create([1, 23, 4, 5, 6, 9, 6, 4, 52, 3, 4]);
         this.dinamic.Unset(3);
-        this.dinamic.Print();
+        this.dinamic.PrintLine();
     }
 
     public void TestRemoveDuplicate()
@@ -72,7 +72,7 @@ class DinamicTest
         this.dinamic = new Dinamic<int>();
         this.dinamic.Create([1, 23, 4, 4, 5, 6, 9, 6, 4, 52, 3, 4, 5]);
         dinamic.RemoveDuplicate();
-        dinamic.Print();
+        dinamic.PrintLine();
 
 
     }
@@ -82,7 +82,7 @@ class DinamicTest
         System.Console.WriteLine("Test Add con firma di Array");
         this.dinamic.Create([1]);
         this.dinamic.Add([5, 6]);
-        this.dinamic.Print();
+        this.dinamic.PrintLine();
     }
 
 
@@ -93,7 +93,7 @@ class DinamicTest
         this.dinamic.Add(2);
         this.dinamic.Add(2);
         this.dinamic.Add(2);
-        this.dinamic.Print();
+        this.dinamic.PrintLine();
     }
 
     public void UnsetByValueTest()
@@ -102,7 +102,7 @@ class DinamicTest
         this.dinamic = new Dinamic<int>();
         this.dinamic.Create([1, 23, 4, 4, 4, 4, 4, 4, 4, 5, 6, 9, 6, 4, 52, 3, 4]);
         this.dinamic.UnsetByValue(4);
-        this.dinamic.Print();
+        this.dinamic.PrintLine();
     }
 
     public void SorterTest()
@@ -110,7 +110,7 @@ class DinamicTest
         this.dinamic = new Dinamic<int>();
         this.dinamic.Create([3, 1, 4, 2]);
         this.dinamic.Sort();
-        this.dinamic.Print();
+        this.dinamic.PrintLine();
     }
 
      public void SorterRevert()
@@ -118,7 +118,7 @@ class DinamicTest
         this.dinamic = new Dinamic<int>();
         this.dinamic.Create([3, 1, 4, 2]);
         this.dinamic.SortRevert();
-        this.dinamic.Print();
+        this.dinamic.PrintLine();
     }
 
 }

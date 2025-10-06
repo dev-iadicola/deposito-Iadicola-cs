@@ -12,3 +12,4 @@ C:\Users\Lui12\OneDrive\Desktop\itconsulting programs\FirstProject\obj\Debug\net
 C:\Users\Lui12\OneDrive\Desktop\itconsulting programs\FirstProject\obj\Debug\net9.0\FirstProject.pdb
 C:\Users\Lui12\OneDrive\Desktop\itconsulting programs\FirstProject\obj\Debug\net9.0\FirstProject.genruntimeconfig.cache
 C:\Users\Lui12\OneDrive\Desktop\itconsulting programs\FirstProject\obj\Debug\net9.0\ref\FirstProject.dll
+C:\Users\Lui12\OneDrive\Desktop\itconsulting programs\FirstProject\obj\Debug\net9.0\FirstProject.sourcelink.json

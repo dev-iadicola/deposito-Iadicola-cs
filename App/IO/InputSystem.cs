@@ -76,7 +76,7 @@ class InputSystem
 
     public static void print(string message)
     {
-        Console.Write(message+"\n");
+        Console.Write(message);
     }
 
 

@@ -30,8 +30,11 @@ class IOutput
 
     }
 
+    public static double MakeDoble(string question) {
+        IOutput io = new IOutput([question]);
 
-
+        return io.GetDouble(0);
+    }
 
     public static int GetInt(string question)
     {

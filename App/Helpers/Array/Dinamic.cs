@@ -204,7 +204,7 @@ class Dinamic<T> where T : IComparable<T>
         {
             for (int k = 0; k < this.items.Length; k++)
             {
-                if (items[k].CompareTo(items[i]) > 0  )
+                if (items[k].CompareTo(items[i]) > 0)
                 {
                     T max = this.items[i];
                     T min = this.items[k];
@@ -222,9 +222,9 @@ class Dinamic<T> where T : IComparable<T>
         {
             for (int k = 0; k < this.items.Length; k++)
             {
-                if (items[k].CompareTo(items[i]) < 0 )
+                if (items[k].CompareTo(items[i]) < 0)
                 {
-                    
+
                     T max = this.items[i];
                     T min = this.items[k];
 
@@ -236,7 +236,7 @@ class Dinamic<T> where T : IComparable<T>
     }
 
     // STAMPA
-    public void Print()
+    public void PrintLine()
     {
         foreach (T item in items)
         {
@@ -244,6 +244,18 @@ class Dinamic<T> where T : IComparable<T>
         }
     }
 
+    public void PrintLine(int index)
+    {
+        InputSystem.printLine(this.Get(index).ToString());
+    }
+
+    public void Print(int index) {
+        InputSystem.print(this.Get(index).ToString());
+    }
+
+    
+
+   
 
 
 
