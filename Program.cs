@@ -44,19 +44,22 @@ class Program
         // bt.equalsTest();
         // bt.print();
 
-        Macchina macchina = new Macchina(new User("Luca", 10), "V8", "Sportive", 300);
-        macchina.motore = "V12";
-        macchina.velocità = 300;
-        macchina.velocità = 300;
-        macchina.velocità = 700;
-        macchina.velocità = 700;
-        macchina.velocità = 700;
-        macchina.velocità = 700;
-        macchina.velocità = 700;
-        macchina.velocità = 700;
-        macchina.velocità = 700;
-        macchina.velocità = 700;
-        macchina.velocità = 300;
+        // Macchina macchina = new Macchina(new User("Luca", 10), "V8", "Sportive", 300);
+        // macchina.motore = "V12";
+        // macchina.velocità = 300;
+        // macchina.velocità = 300;
+        // macchina.velocità = 700;
+        // macchina.velocità = 700;
+        // macchina.velocità = 700;
+        // macchina.velocità = 700;
+        // macchina.velocità = 700;
+        // macchina.velocità = 700;
+        // macchina.velocità = 700;
+        // macchina.velocità = 700;
+        // macchina.velocità = 300;
+
+        new VideoTecaTerminal();
+
 
     }
 
