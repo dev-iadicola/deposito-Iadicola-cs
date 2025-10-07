@@ -44,6 +44,8 @@ class IOutput
         return (T)Convert.ChangeType(value, typeof(T));
     }
 
+ 
+
 
     public static string Make(string question) // FIX: vecchio metodo Get richimato in Make
     {

@@ -1,15 +1,21 @@
+using System.ComponentModel;
+using FirstProject.App.Entity.Base;
+
 namespace FirstProject.App.Entity;
 
-class Macchina
+class Macchina : Veicle
 {
     private string _motore { get; set; }
     private string _sospensioni { get; set; }
     private float _velocità { get; set; }
     private int _nrModifiche { get; set; }
 
+    public int port = 3;
+
     public User user;
 
-    public Macchina(User user, string motore, string sospensioni, float velocità)
+    public Macchina(User user, string motore, string sospensioni, float velocità, string brand, string model)
+        : base(brand, model)
     {
         this.user = user ?? new User("Mario", 10);
         this._motore = motore;
@@ -17,6 +23,23 @@ class Macchina
         this._velocità = velocità;
         this._nrModifiche = 0;
         Print();
+    }
+
+    public Macchina(int port, string brand, string model)
+        : base(brand, model)
+    {
+        this.port = port;
+    }
+
+    public override string ToString()
+    {
+        return $"Porte {port} {base.ToString()}";
+    }
+
+    public new void PrintInfo()
+    {
+        base.PrintInfo();
+        Console.WriteLine($"L'auto ha {port} porte");
     }
 
     private bool minusCredit()

@@ -6,6 +6,7 @@ using FirstProject.App.Helpers.Array;
 using FirstProject.App.Helpers.Str;
 using FirstProject.App.IO;
 using FirstProject.App.Terminal;
+using FirstProject.App.Entity.Base;
 
 class Program
 {
@@ -58,7 +59,9 @@ class Program
         // macchina.velocità = 700;
         // macchina.velocità = 300;
 
-        new VideoTecaTerminal();
+        // new VideoTecaTerminal();
+
+        new Garage();
 
 
     }
