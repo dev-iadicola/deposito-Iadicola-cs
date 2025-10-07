@@ -20,8 +20,18 @@ class StringManipulation
         return stringWithoutSpace;
     }
 
+
+    public static string GenerateRandomString(string charSet, int length)
+    {
+        Random random = new Random();
+        return new string(Enumerable.Repeat(charSet, length)
+        .Select(s => s[random.Next(s.Length)])
+        .ToArray());
+    }
+
     public static int CountVocal(string str)
     {
+       
         string vocals = "aeiou";
         int count = 0;
         foreach (char c in str)

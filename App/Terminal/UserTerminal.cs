@@ -18,7 +18,7 @@ class UserTerminal : InputSystem
         this.user = user ?? new User();
     }
 
-    
+
 
     public void sendRequestLogin()
     {
@@ -41,6 +41,10 @@ class UserTerminal : InputSystem
         
     }
 
+    public void Saluta()
+    {
+        System.Console.WriteLine($"Ciao, mi chiamo {this.user.Get("name")}. \nHo {this.user.Get("age")} Anni");
+    }
 
     public void Shopping()
     {

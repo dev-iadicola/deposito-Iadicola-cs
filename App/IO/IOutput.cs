@@ -22,6 +22,28 @@ class IOutput
         this.output = InputSystem.GenerateIO(questions ?? new string[] { "" });
     }
 
+    public static T Make<T>(string question)
+    {
+        IOutput io = new IOutput([question]);
+
+        object value;
+
+        if (typeof(T) == typeof(int))
+            value = io.GetInt(0);
+        else if (typeof(T) == typeof(float))
+            value = io.GetFloat(0);
+        else if (typeof(T) == typeof(double))
+            value = io.GetDouble(0);
+        else if (typeof(T) == typeof(decimal))
+            value = io.GetDecimal(0);
+        else if (typeof(T) == typeof(string))
+            value = io.output[0];
+        else
+            throw new NotSupportedException($"Il tipo {typeof(T).Name} non è supportato.");
+
+        return (T)Convert.ChangeType(value, typeof(T));
+    }
+
 
     public static string Make(string question) // FIX: vecchio metodo Get richimato in Make
     {
@@ -30,7 +52,8 @@ class IOutput
 
     }
 
-    public static double MakeDoble(string question) {
+    public static double MakeDoble(string question)
+    {
         IOutput io = new IOutput([question]);
 
         return io.GetDouble(0);
@@ -78,7 +101,7 @@ class IOutput
 
     public double GetDouble(int index)
     {
-        return Casting.stringToDouble((string)this.output[index]);
+        return (double)Casting.stringToDouble((string)this.output[index]);
     }
     public int getSize()
     {
@@ -106,46 +129,6 @@ class IOutput
         }
         return intO;
     }
-
-    // public void setResponseToIntegers()
-    // {
-    //     for (int i = 0; i < this.responses.Length; i++)
-    //     {
-    //         this.responses[i] = Casting.stringToInt((string)this.responses[i]);
-    //     }
-    // }
-
-    // public void setResponseToFloats()
-    // {
-    //     for (int i = 0; i < this.responses.Length; i++)
-    //     {
-    //         this.responses[i] = Casting.stringToFloat((string)this.responses[i]);
-    //     }
-    // }
-
-    // public void setResponseToDoubles()
-    // {
-    //     for (int i = 0; i < this.responses.Length; i++)
-    //     {
-    //         this.responses[i] = Casting.stringToDouble((string)this.responses[i]);
-    //     }
-    // }
-
-    // public void setResponseToBooleans()
-    // {
-    //     for (int i = 0; i < this.responses.Length; i++)
-    //     {
-    //         this.responses[i] = Casting.stringToBool((string)this.responses[i]);
-    //     }
-    // }
-
-    // public void setResponseToDecimals()
-    // {
-    //     for (int i = 0; i < this.responses.Length; i++)
-    //     {
-    //         this.responses[i] = ((decimal)Casting.stringToDouble((string)this.responses[i]));
-    //     }
-    // }
 
 
 

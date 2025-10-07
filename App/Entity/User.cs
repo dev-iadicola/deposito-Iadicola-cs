@@ -1,15 +1,14 @@
 
 #nullable disable
-namespace FirstProject.App.Entity;
-
-using System.Net.Http.Headers;
 using System.Security.Cryptography;
-using FirstProject.App.Entity;
 
+namespace FirstProject.App.Entity;
 
 class User
 {
     private const string password = "password";
+
+    public int credit { get; set; } = 0;
 
     public int loginAttempts = 3;
 
@@ -23,10 +22,54 @@ class User
         prop["password"] = initPassword;
     }
 
+    public User(string name, int? credit = 0)
+    {
+        prop = new Dictionary<string, string>();
+
+        prop["name"] = name ?? "Mario";
+        this.credit = credit ?? 0;
+
+    }
+    public User(string name, string age, string initPassword = password)
+    {
+        prop = new Dictionary<string, string>();
+
+        prop["name"] = name ?? "Mario";
+        prop["age"] = age ?? "18";
+
+        prop["password"] = initPassword;
+    }
+
+
     public string Get(string key)
     {
         return prop.ContainsKey(key) ? prop[key] : null;
     }
+
+    public void SetEta(string val)
+    {
+        prop["eta"] = val;
+    }
+
+    public void setName(string val)
+    {
+        prop["name"] = val;
+    }
+
+    //  public static bool isAdult()
+    // {
+    //     string? ageStr = IOutput.Make("ei maggiorenne?")
+    //     int age = Casting.stringToInt(ageStr);
+
+    //     while (age < 0)
+    //     {
+    //         Console.WriteLine("Inserisci un'età valida");
+    //         ageStr = Console.ReadLine();
+    //         age = Casting.stringToInt(ageStr);
+    //     }
+    //     readLine = ageStr;
+    //     return Calc.isMajorThan(age, 17);
+    // }
 
     public string Set(string key, string value)
     {
@@ -38,6 +81,18 @@ class User
         return prop["password"] == password;
     }
 
+    public void Print(string value)
+    {
+        System.Console.WriteLine(prop[value]);
+    }
+
+    public void Print()
+    {
+        foreach (var p in this.prop)
+        {
+            System.Console.WriteLine($"{p.Key}: {p.Value}");
+        }
+    }
 
  public int minusAttempLogin()
     {

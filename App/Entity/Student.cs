@@ -1,23 +1,40 @@
+using FirstProject.App.Helpers;
+using FirstProject.App.Helpers.Str;
 using FirstProject.App.IO;
 
 namespace FirstProject.App.Entity;
 
-class Student : User
+class Student 
 {
-    public string name { get; set; }
+
+    public string? name { get; set; }
     public float[] votes { get; set; } = [];
     public int age { get; set; }
 
-    public Student(string? name = null, int? age = null)
+    public int year { get; set; }
+
+    public User user;
+
+    public string matricola;
+
+    public Student(User? user = null, float[]? votes = null, int? year = null)
     {
-        this.name = name ?? "Default Name";
-        this.age = age ?? 0;
+        this.user = user ?? new User();
+        this.votes = votes ?? [];
+        this.year = year ?? DateTime.Now.Year - Casting.stringToInt(user?.Get("age")) ;
+        this.matricola = this.generateMatricola();
     }
 
-    public void SetVotes(float[] votes)
+    private string generateMatricola()
     {
-        this.votes = votes;
+        string characterSubset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        int length = 10;
+
+        return StringManipulation.GenerateRandomString(characterSubset, length);
+
     }
+
+    public void SetVotes(float[] votes) => this.votes = votes;
 
     public float avg()
     {
@@ -33,17 +50,17 @@ class Student : User
         return Calc.min(this.votes);
     }
 
-    public void Print()
+    public  void Print()
     {
-
         Console.WriteLine("Name: " + name);
         Console.WriteLine("age: " + age);
+        Console.WriteLine("age: " + year);
         Console.WriteLine("avg: " + this.avg());
         Console.WriteLine("min: " + this.min());
         Console.WriteLine("max: " + this.max());
     }
 
 
-    
-    
+
+
 }

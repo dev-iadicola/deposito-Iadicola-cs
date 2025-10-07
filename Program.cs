@@ -1,7 +1,7 @@
 ﻿using System.Net.WebSockets;
 using System.Security.Cryptography.X509Certificates;
-using FirstProject.App;
 using FirstProject.App.Entity;
+using FirstProject.App;
 using FirstProject.App.Helpers.Array;
 using FirstProject.App.Helpers.Str;
 using FirstProject.App.IO;
@@ -22,7 +22,42 @@ class Program
         // dtest.SorterTest();
         // dtest.SorterRevert();
 
-        new Gelato();
+        // new Gelato();
+
+        // User user = new User("Mario", "29");
+        // User user2 = new User("Luca", "28");
+
+        // //  UserTerminal userT = new UserTerminal(user);
+        // //  UserTerminal userT2 = new UserTerminal(user2);
+
+        // // userT.Saluta();
+        // //  userT2.Saluta();
+        // float[] votes = [2, 3, 4, 5];
+        // float[] votes2 = [2, 6, 5, 6];
+        // var st1 = new StudetTerminal(new Student(user, votes));
+        // var st2 = new StudetTerminal(new Student(user2, votes2));
+
+        // st2.Print();
+
+
+        // BookTerminal bt = new BookTerminal();
+        // bt.equalsTest();
+        // bt.print();
+
+        Macchina macchina = new Macchina(new User("Luca", 10), "V8", "Sportive", 300);
+        macchina.motore = "V12";
+        macchina.velocità = 300;
+        macchina.velocità = 300;
+        macchina.velocità = 700;
+        macchina.velocità = 700;
+        macchina.velocità = 700;
+        macchina.velocità = 700;
+        macchina.velocità = 700;
+        macchina.velocità = 700;
+        macchina.velocità = 700;
+        macchina.velocità = 700;
+        macchina.velocità = 300;
+
     }
 
     static void pg86()
@@ -37,7 +72,7 @@ class Program
     static void countVocalInString()
     {
         Console.WriteLine("Inserisci una stringa che contenga vocali per contarli\n");
-        int count = StringManipulation.CountVocal(Console.ReadLine());
+        int count = StringManipulation.CountVocal(Console.ReadLine()?? "nothing");
         Console.WriteLine($"Vocali trovate {count}");
     }
     static void deleteSpaceInString()

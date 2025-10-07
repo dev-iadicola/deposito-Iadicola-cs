@@ -22,6 +22,11 @@ class StudetTerminal
         student.SetVotes(io.AllFloat());
 
     }
+
+    public void Print()
+    {
+        Console.WriteLine($"{this.student.matricola}, nome: {student.name} nato il {student.year}");
+    }
     
     
 

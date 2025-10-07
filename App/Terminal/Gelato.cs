@@ -48,8 +48,10 @@ class Gelato
     {
         for (int i = 0; i < this.gelati.All().Length; i++)
         {
-            Console.WriteLine($"Il Gelato {this.gelati.Get(i)} Ha il prezzo {this.prezzi.Get(i)} Euro");
-         
+            Console.WriteLine($"Il Gelato {this.gelati.Get(i)} Ha il prezzo {(double)this.prezzi.Get(i)} Euro");
+
         }
     }
+
+    
 }
