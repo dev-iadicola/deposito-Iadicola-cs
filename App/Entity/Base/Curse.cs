@@ -22,7 +22,7 @@ class Curse
         this.studenti.Add(stu);
     }
 
-    public virtual string ToString()
+    public override string ToString()
     {
         return $" Nome corso: {nome}, durata: {durataH}, doc: {docente} \n";
     }
