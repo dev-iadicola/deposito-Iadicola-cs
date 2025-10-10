@@ -61,7 +61,9 @@ class Program
 
         // new VideoTecaTerminal();
 
-        new Garage();
+        // new Garage();
+
+        new DispositiveTerminal();
 
 
     }

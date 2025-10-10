@@ -19,7 +19,7 @@ class Student
 
     public Student(User? user = null, float[]? votes = null, int? year = null)
     {
-        this.user = user ?? new User();
+        this.user = user ?? new User("Mario","16");
         this.votes = votes ?? [];
         this.year = year ?? DateTime.Now.Year - Casting.stringToInt(user?.Get("age")) ;
         this.matricola = this.generateMatricola();
