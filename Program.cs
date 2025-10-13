@@ -23,6 +23,7 @@ class Program
 
         Logger log = Logger.GetInstance();
         log.Message("Hello word!");
+        new LoggerTest();
     }
 
     

@@ -5,6 +5,7 @@ class Logger
     private static Logger? log;
     private Logger() { }
 
+    private List<string> messages;
     public static Logger GetInstance()
     {
         if (log == null)
@@ -32,6 +33,11 @@ class Logger
         string formattedDate = romeTime.ToString("dd/MM/yyyy HH:mm:ss");
         return $"UTC in Rome: {formattedDate}";
     } 
+
+    public void Log(string message)
+    {
+        messages.Add(message);
+    }
       
 
 
