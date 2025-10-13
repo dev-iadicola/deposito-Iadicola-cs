@@ -8,6 +8,7 @@ using FirstProject.App.IO;
 using FirstProject.App.Terminal;
 using FirstProject.App.Entity.Base;
 using FirstProject.App.Http;
+using FirstProject.App.Core;
 
 class Program
 {
@@ -20,8 +21,8 @@ class Program
 
         //new DispositiveTerminal();
 
-        new CorsoTerminal();
-
+        Logger log = Logger.GetInstance();
+        log.Message("Hello word!");
     }
 
     
