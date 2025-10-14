@@ -1,25 +1,73 @@
+using System.Net.WebSockets;
 using FirstProject.App.Contracts;
+using FirstProject.App.Core;
+using FirstProject.App.Helpers.Array;
 
 namespace FirstProject.App.Entity.Concrete;
 
-class Auto : IVeicle
+abstract class Veicle : IVeicle
 {
-    public void Start() => System.Console.WriteLine("Avvio dell'auto");
+    public virtual void Start()
+    {
+        Log.Error("Emplementazione errata, manca override");
+    }
+    public virtual void ShowTyep()
+    {
+        Log.Error("Emplementazione errata, manca override");
 
-    public void ShowTyep() => System.Console.WriteLine("Tipo Auto");
+    }
+
+
+}
+class Auto : Veicle
+{
+    public override void Start() => System.Console.WriteLine("Avvio dell'auto");
+
+    public override void ShowTyep() => System.Console.WriteLine("Tipo Auto");
+
 
 }
 
-class Bike : IVeicle
+class Bike : Veicle
 {
-    public void Start() => System.Console.WriteLine("Avvio della moto");
+    public override void Start() => System.Console.WriteLine("Avvio della moto");
 
-    public void ShowTyep() => System.Console.WriteLine("Tipo Auto");
+    public override void ShowTyep() => System.Console.WriteLine("Tipo Auto");
 
 }
-class Truck : IVeicle
+class Truck : Veicle
 {
-    public void Start() => System.Console.WriteLine("Avvio del camion");
+    public override void Start() => System.Console.WriteLine("Avvio del camion");
 
-    public void ShowTyep() => System.Console.WriteLine("Tipo Camion");
+    public override void ShowTyep() => System.Console.WriteLine("Tipo Camion");
+}
+
+
+class RegistraVeicolo : ISingleton
+{
+    private static RegistraVeicolo? _istance;
+
+    private List<Veicle> veicles = new List<Veicle>();
+
+    private RegistraVeicolo(){}
+    public static RegistraVeicolo GetIstance()
+    {
+        _istance = new RegistraVeicolo();
+        return _istance;
+    }
+
+    public void Add(Veicle veicle)
+    {   
+        veicles.Add(veicle);
+    }
+
+    public void Show()
+    {
+        int count = 0;
+        foreach(Veicle ve in this.veicles)
+        {
+            System.Console.WriteLine($"{count++} ");
+            ve.ShowTyep();
+        }
+    }
 }

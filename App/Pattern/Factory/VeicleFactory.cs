@@ -8,7 +8,7 @@ namespace FirstProject.App.Pattern.Factory;
 
 class VeicleFactory{
     
-    public static IVeicle? Create(string type)
+    public static Veicle? Create(string type)
     {
         // Dinamic<string> veicles = new Dinamic<string>(); //TODO: da implementare
 

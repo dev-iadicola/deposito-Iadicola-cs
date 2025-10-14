@@ -1,3 +1,4 @@
+#nullable disable
 using FirstProject.App.Contracts;
 
 namespace FirstProject.App.Pattern.Singleton;
