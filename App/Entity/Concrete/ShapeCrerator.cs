@@ -18,17 +18,26 @@ abstract class ShapeCrerator()
 
 }
 
-class Circle : IShape
+
+abstract class Shape : IShape
 {
-    public void Draw()
+    public virtual void Draw()
+    {
+        Console.WriteLine("Errore");
+    }
+}
+
+class Circle : Shape
+{
+    public override void Draw()
     {
         System.Console.WriteLine("Circle");
     }
 }
 
-class Square : IShape
+class Square : Shape
 {
-    public void Draw()
+    public override void Draw()
     {
         System.Console.WriteLine("Square");
 
