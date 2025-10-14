@@ -15,15 +15,7 @@ class Program
     static void Main()
     {
 
-        // new VideoTecaTerminal();
-
-        // new Garage();
-
-        //new DispositiveTerminal();
-
-        Logger log = Logger.GetInstance();
-        log.Message("Hello word!");
-        new LoggerTest();
+        SingletonTesting.CSystem();
     }
 
     

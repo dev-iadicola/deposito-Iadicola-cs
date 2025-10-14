@@ -1,6 +1,8 @@
+using FirstProject.App.Contracts;
+
 namespace FirstProject.App.Core;
 
-class Logger
+class Logger : ISingleton
 {
     private static Logger? log;
     private Logger() { }
