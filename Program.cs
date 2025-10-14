@@ -14,7 +14,7 @@ class Program
 {
     static void Main()
     {
-        PatternTest.FactoryVeicle();
+        PatternTest.FacotryShape();
     }
 
     
