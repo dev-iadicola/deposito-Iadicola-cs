@@ -14,8 +14,7 @@ class Program
 {
     static void Main()
     {
-
-        SingletonTesting.CSystem();
+        PatternTest.FactoryVeicle();
     }
 
     

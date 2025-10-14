@@ -1,4 +1,4 @@
-using FirstProject.App.Core.Singleton;
+using FirstProject.App.Pattern.Singleton;
 
 namespace FirstProject.App.Terminal;
 

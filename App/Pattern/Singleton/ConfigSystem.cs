@@ -1,6 +1,6 @@
 using FirstProject.App.Contracts;
 
-namespace FirstProject.App.Core.Singleton;
+namespace FirstProject.App.Pattern.Singleton;
 
 class ConfigSystem : ISingleton
 {

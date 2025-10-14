@@ -1,13 +1,13 @@
 using FirstProject.App.Contracts;
 
-namespace FirstProject.App.Core;
+namespace FirstProject.App.Pattern.Singleton;
 
 class Logger : ISingleton
 {
     private static Logger? log;
     private Logger() { }
 
-    private List<string> messages;
+    private List<string>? messages;
     public static Logger GetInstance()
     {
         if (log == null)
@@ -38,7 +38,7 @@ class Logger : ISingleton
 
     public void Log(string message)
     {
-        messages.Add(message);
+        messages?.Add(message);
     }
       
 
