@@ -8,7 +8,7 @@ class GestioneCreazioneUtenteSubject : IPSubject<string>
 {
     private string _new = "";
 
-    public string New
+    private string New
     {
         get => _new;
         set
@@ -17,10 +17,10 @@ class GestioneCreazioneUtenteSubject : IPSubject<string>
         }
     }
 
-    public Utente CreateUser(string name)
+    public void CreateUser(string name)
     {
-        New = UserFacotry.Create(name).ToString();
-        return UserFacotry.Create(name);
+        Utente user = UserFacotry.Create(name);
+        New = user.ToString();
     }
 
     private List<IPObserver<string>> _obs = new List<IPObserver<string>>(); 
