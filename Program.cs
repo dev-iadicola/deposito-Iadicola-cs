@@ -1,4 +1,5 @@
 ﻿
+using FirstProject.App.Terminal.DecoratorTest;
 using FirstProject.App.Terminal.ObserverTest;
 class Program
 {
@@ -11,7 +12,8 @@ class Program
 
         // ConcreatedTests.Example();
         // ConcreatedTests.MeteoTest();
-        ConcreatedTests.GestioneCreazioneUtenteTest();
+        // ConcreatedTests.GestioneCreazioneUtenteTest();
+        Decorator.TestTorte();
     }
 
     

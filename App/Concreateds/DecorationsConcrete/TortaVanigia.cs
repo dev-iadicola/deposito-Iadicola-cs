@@ -2,15 +2,10 @@ using FirstProject.App.Contracts.DecorationInterface;
 
 namespace FirstProject.App.Concreateds.DecorationsConcrete;
 
-class Te : Ibevanda
+class TortaVaniglia : Itorta
 {
-    public double Costo()
-    {
-        return 0.60;
-    }
-
     public string Descrizione()
     {
-        return "Descrizione Tè";
+        return "Torta alla Vaniglia";
     }
 }

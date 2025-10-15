@@ -3,19 +3,16 @@ using FirstProject.App.Pattern.Decorator;
 
 namespace FirstProject.App.Concreateds.DecorationsConcrete;
 
-class ConPanna : DecoratoreBevanda
+class ConMacedonia : DecoratorTorta
 {
-    public ConPanna(Ibevanda iBevanda) : base(iBevanda)
+    public ConMacedonia(Itorta iBevanda) : base(iBevanda)
     {
     }
 
       public new string Descrizione()
     {
-        return base.Descrizione() + " Panna ";
+        return base.Descrizione() + " + Macedonia ";
     }
 
-    public new double Costo()
-    {
-        return base.Costo() + 0.20;
-    }
+   
 }

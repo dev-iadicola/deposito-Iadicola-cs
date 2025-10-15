@@ -4,13 +4,16 @@ namespace FirstProject.App.Concreateds.DecorationsConcrete;
 
 class Caffe : Ibevanda
 {
+    private double _costo = 0.60;
+
+    private string descrizione = "Caffè";
     public double Costo()
     {
-        throw new NotImplementedException();
+        return _costo;
     }
 
     public string Descrizione()
     {
-        throw new NotImplementedException();
+        return "Descrizione: " + descrizione;
     }
 }

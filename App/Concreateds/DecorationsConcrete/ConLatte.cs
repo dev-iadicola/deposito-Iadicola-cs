@@ -6,6 +6,17 @@ class ConLatte : DecoratoreBevanda
 {
     public ConLatte(DecoratoreBevanda decBev) : base(decBev)
     {
-        
+
     }
+
+      public new string Descrizione()
+    {
+        return base.Descrizione() + " Panna ";
+    }
+
+    public new double Costo()
+    {
+        return base.Costo() + 0.20;
+    }
+    
 }
