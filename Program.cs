@@ -15,7 +15,8 @@ class Program
     static void Main()
     {
         // PatternTest.FacotryShape()
-        PatternTest.RegistraVeicoloTest();
+        // PatternTest.RegistraVeicoloTest();
+        PatternTest.DispositiveTest();
     }
 
     

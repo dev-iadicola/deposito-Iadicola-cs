@@ -1,13 +1,14 @@
 using System.Diagnostics;
 using FirstProject.App.Contracts;
+using FirstProject.App.Entity.Concrete;
 
 namespace FirstProject.App.Entity;
 
-class Computer : IDispositiveE
+class Computer : Dispositive
 {
 	public string Modello { get; set; }
 
-    public Computer(string Modello)
+    public Computer(string Modello = "Basic PC")
     {
         this.Modello = Modello;
     }

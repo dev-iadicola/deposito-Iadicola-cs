@@ -11,13 +11,13 @@ class InputSystem
     /// <summary>
     /// Stores the latest input line read from the user as a nullable string.
     /// </summary>
-    public static string readLine = string.Empty ;
+    public static string readLine = string.Empty;
     public static string[] GenerateIO(string[] questions)
     {
         string[] response = new string[questions.Length];
         for (int i = 0; i < questions.Length; i++)
         {
-            Console.Write(questions[i]+" ");
+            Console.Write(questions[i] + " ");
             response[i] = Console.ReadLine() ?? "0";
         }
 
@@ -26,15 +26,31 @@ class InputSystem
 
     public static void printLine(string message)
     {
-        Console.WriteLine(message+" ");
+        Console.WriteLine(message + " ");
     }
     public static void print(string message)
     {
         Console.Write(message);
     }
 
+    public static void printDecoration(string message = "", int interLines = 1)
+    {
+        for (int i = 0; i <= interLines; i++)
+        {
+            Console.WriteLine($"______________________");
 
-    
+        }
+        Console.WriteLine($"------ {message.ToUpper()} -----");
+        for (int i = 0; i <= interLines; i++)
+        {
+            Console.WriteLine($"______________________");
+
+        }
+    }
+
+
+
+
 
 
 

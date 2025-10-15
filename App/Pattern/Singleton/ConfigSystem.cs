@@ -10,6 +10,7 @@ class ConfigSystem : ISingleton
 
     private static Logger? _log;
 
+
     private ConfigSystem()
     {
         _log = Logger.GetInstance();
@@ -42,9 +43,11 @@ class ConfigSystem : ISingleton
         }
     }
 
+
+
     public string Get(string key)
     {
-        return memory.ContainsKey(key) ? memory[key] : string.Empty;
+        return memory.ContainsKey(key) ? memory[key] : "";
     }
 
     public void PrintMemories()

@@ -63,7 +63,7 @@ class RegistraVeicolo : ISingleton
 
     public void Show()
     {
-        int count = 0;
+        int count = 1;
         foreach(Veicle ve in this.veicles)
         {
             System.Console.WriteLine($"{count++} ");

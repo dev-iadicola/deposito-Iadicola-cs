@@ -1,16 +1,19 @@
 using System.Diagnostics;
 using FirstProject.App.Contracts;
+using FirstProject.App.Entity.Concrete;
 
 namespace FirstProject.App.Entity;
 
-class Printer : IDispositiveE
+class Printer : Dispositive
 {
 	public string Modello { get; set; }
 
-      public Printer(string Modello)
+    public Printer(string Modello = "Basic Printer")
     {
         this.Modello = Modello;
     }
+    
+
     public void TurnOff()
     {
         System.Console.WriteLine("The Printer is shutting down.");
