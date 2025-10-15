@@ -10,7 +10,8 @@ class Program
         // PatternTest.DispositiveTest();
 
         // ConcreatedTests.Example();
-        ConcreatedTests.MeteoTest();
+        // ConcreatedTests.MeteoTest();
+        ConcreatedTests.GestioneCreazioneUtenteTest();
     }
 
     

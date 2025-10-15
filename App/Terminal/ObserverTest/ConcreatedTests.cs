@@ -37,7 +37,24 @@ class ConcreatedTests
         subject.Attach(mobileObserver2);
         subject.Attach(deskObs);
 
-        subject.Dati = IOutput.Make<string>("Inserisci nuovo dato meteo"); 
+        subject.Dati = IOutput.Make<string>("Inserisci nuovo dato meteo");
+
+    }
+    
+    public static void GestioneCreazioneUtenteTest()
+    {
+        // Istnazio l'oggetto per creare il gestionale subject
+        GestioneCreazioneUtenteSubject gcu = new GestioneCreazioneUtenteSubject();
+        // istanzio i due observer
+        ModuloLogObserve moduloLogObserve =  ModuloLogObserve.Instance;
+        ModuloMarketingObserve moduloMarketingObserve =  ModuloMarketingObserve.Instance;
+
+        gcu.Attach(moduloLogObserve);
+        gcu.Attach(moduloMarketingObserve);
+
+        gcu.CreateUser(IOutput.Make<string>("Inserisci il nome dell'utente che deve ricevere i moduli Log e Marketing"));
+
+        
 
     }
 }
