@@ -6,7 +6,7 @@ namespace FirstProject.App.Entity;
 
 class Printer : Dispositive
 {
-	public string Modello { get; set; }
+	public new string Modello { get; set; }
 
     public Printer(string Modello = "Basic Printer")
     {
@@ -14,12 +14,12 @@ class Printer : Dispositive
     }
     
 
-    public void TurnOff()
+    public override void TurnOff()
     {
         System.Console.WriteLine("The Printer is shutting down.");
     }
 
-    public void TurnOn()
+    public override void TurnOn()
     {
         System.Console.WriteLine("The Printer turning on.");
     }

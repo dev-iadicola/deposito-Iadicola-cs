@@ -5,10 +5,10 @@ namespace FirstProject.App.Pattern.Singleton;
 
 class Logger : ISingleton
 {
-    private static Logger? log;
+    private static Logger log;
     private Logger() { }
 
-    private List<string>? messages;
+    private List<string> messages = [];
     public static Logger GetInstance()
     {
         if (log == null)

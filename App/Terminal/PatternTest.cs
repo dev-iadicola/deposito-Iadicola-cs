@@ -28,7 +28,7 @@ class PatternTest()
     {
 
         string shape = IOutput.Make<string>("Which shape do you want to draw?");
-        IShape ishape = ShapeCrerator.Create(shape);
+        IShape ishape = ShapeCrerator.Create(shape) ?? throw new Exception(" è null");
         ishape?.Draw();
 
     }
@@ -56,7 +56,7 @@ class PatternTest()
             {
                 InputSystem.printDecoration("lista veicoli", 1);
                 var veicle = VeicleFactory.Create(type); // creazione del veicolo
-                register.Add(veicle);
+                register.Add(veicle ?? throw new Exception("Veicolo non esistente."));
                 register.Show();
                 InputSystem.printDecoration("Fine", 0);
 

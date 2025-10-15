@@ -1,3 +1,4 @@
+
 using System.Diagnostics;
 using FirstProject.App.Contracts;
 using FirstProject.App.Entity.Concrete;
@@ -6,18 +7,18 @@ namespace FirstProject.App.Entity;
 
 class Computer : Dispositive
 {
-	public string Modello { get; set; }
+	public new string Modello { get; set; }
 
     public Computer(string Modello = "Basic PC")
     {
         this.Modello = Modello;
     }
-    public void TurnOff()
+    public override void TurnOff()
     {
         System.Console.WriteLine("The computer is shutting down.");
     }
 
-    public void TurnOn()
+    public override void TurnOn()
     {
         System.Console.WriteLine("The computer turning on.");
     }
