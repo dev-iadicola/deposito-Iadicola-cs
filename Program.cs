@@ -1,19 +1,12 @@
 ﻿
-using FirstProject.App.Terminal.DecoratorTest;
-using FirstProject.App.Terminal.ObserverTest;
+using FirstProject.App.Pattern.Strategy;
+
 class Program
 {
     static void Main()
     {
 
-        // PatternTest.FacotryShape()
-        // PatternTest.RegistraVeicoloTest();
-        // PatternTest.DispositiveTest();
-
-        // ConcreatedTests.Example();
-        // ConcreatedTests.MeteoTest();
-        // ConcreatedTests.GestioneCreazioneUtenteTest();
-        DecoratorTest.Torte();
+        CalcolatriceExe.Exe();        
     }
 
     

@@ -10,7 +10,7 @@ namespace FirstProject.App.Pattern.Factory;
 
 class TortaFactory
 {
-    private Itorta tortaCioccolato;
+    private Itorta? tortaCioccolato;
 
     public static DecoratorTorta? Create(int output, Itorta tortaCioccolato, out bool exit)
     {

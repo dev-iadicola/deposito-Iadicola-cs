@@ -29,7 +29,7 @@ class DecoratorTest
             "\n3. Inserisci Glassa" +
             "\n0. exit" +
             "\nIngrendiente: ");
-            Itorta res = TortaFactory.Create(output, tortaCioccolato, out exit);
+            Itorta res = TortaFactory.Create(output, tortaCioccolato, out exit) ?? throw new NullReferenceException();
 
             System.Console.WriteLine(res?.Descrizione());
             
