@@ -4,7 +4,7 @@ namespace FirstProject.App.Concreateds.DecorationsConcrete;
 
 class TortaCioccolato : Itorta
 {
-    public string Descrizione()
+    public virtual string Descrizione()
     {
         return "Torta al Cioccolato";
     }

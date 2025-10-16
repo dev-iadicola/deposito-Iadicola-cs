@@ -9,7 +9,7 @@ class ConCioccolato :  DecoratorTorta
     {
     }
 
-    public new string Descrizione()
+    public override string Descrizione()
     {
         return base.Descrizione() + " + Cioccolato ";
     }

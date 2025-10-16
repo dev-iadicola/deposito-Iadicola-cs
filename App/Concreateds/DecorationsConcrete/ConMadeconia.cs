@@ -5,11 +5,11 @@ namespace FirstProject.App.Concreateds.DecorationsConcrete;
 
 class ConMacedonia : DecoratorTorta
 {
-    public ConMacedonia(Itorta iBevanda) : base(iBevanda)
+    public ConMacedonia(Itorta itorta) : base(itorta)
     {
     }
 
-      public new string Descrizione()
+      public override string Descrizione()
     {
         return base.Descrizione() + " + Macedonia ";
     }

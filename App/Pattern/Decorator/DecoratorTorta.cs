@@ -11,7 +11,7 @@ abstract class DecoratorTorta : Itorta
         _i = i;
     }
 
-    public string Descrizione()
+    public virtual string Descrizione()
     {
         return _i.Descrizione();
     }
