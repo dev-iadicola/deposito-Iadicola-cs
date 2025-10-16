@@ -13,7 +13,7 @@ class Program
         // ConcreatedTests.Example();
         // ConcreatedTests.MeteoTest();
         // ConcreatedTests.GestioneCreazioneUtenteTest();
-        Decorator.TestTorte();
+        DecoratorTest.Torte();
     }
 
     

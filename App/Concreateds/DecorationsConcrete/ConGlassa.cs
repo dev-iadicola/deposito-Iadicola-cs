@@ -5,13 +5,41 @@ namespace FirstProject.App.Concreateds.DecorationsConcrete;
 
 class ConGlassa : DecoratorTorta
 {
-    public ConGlassa(Itorta i) : base(i)
+  public ConGlassa(Itorta i) : base(i)
+  {
+  }
+
+  public override string Descrizione()
+  {
+    return base.Descrizione() + " + Glassa ";
+  }
+
+}
+
+class ConCioccolato : DecoratorTorta
+{
+  public ConCioccolato(Itorta it) : base(it)
+  {
+  }
+
+  public override string Descrizione()
+  {
+    return base.Descrizione() + " + Cioccolato ";
+  }
+
+
+}
+
+class ConMacedonia : DecoratorTorta
+{
+    public ConMacedonia(Itorta itorta) : base(itorta)
     {
     }
 
       public override string Descrizione()
     {
-        return base.Descrizione() + " + Glassa ";
+        return base.Descrizione() + " + Macedonia ";
     }
 
+   
 }

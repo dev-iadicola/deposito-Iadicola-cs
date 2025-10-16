@@ -4,17 +4,18 @@ using FirstProject.App.Contracts.DecorationInterface;
 using FirstProject.App.Core;
 using FirstProject.App.IO;
 using FirstProject.App.Pattern.Decorator;
+using FirstProject.App.Pattern.Factory;
 
 namespace FirstProject.App.Terminal.DecoratorTest;
 
-class Decorator
+class DecoratorTest
 {
     public static void TestBevande()
     {
 
     }
 
-    public static void TestTorte()
+    public static void Torte()
     {
         bool exit = true;
         Itorta tortaCioccolato = new TortaCioccolato();
@@ -28,21 +29,10 @@ class Decorator
             "\n3. Inserisci Glassa" +
             "\n0. exit" +
             "\nIngrendiente: ");
-            Itorta res;
-            switch (output)
-            {
-                case 0: exit = false; break;
-                case 1: res = new ConMacedonia(tortaCioccolato);
-                System.Console.WriteLine(res.Descrizione());
-                 break;
-                case 3: res = new ConGlassa(tortaCioccolato); 
-                System.Console.WriteLine(res.Descrizione());
-                break;
-                case 2: res = new ConCioccolato(tortaCioccolato); 
-                System.Console.WriteLine(res.Descrizione());
-                break;
-                default: Log.Error("Input errato"); break;
-            }
+            Itorta res = TortaFactory.Create(output, tortaCioccolato, out exit);
+
+            System.Console.WriteLine(res?.Descrizione());
+            
 
         } while (exit);
     }
