@@ -1,6 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
+
 using FirstProject.App.Core;
 using FirstProject.App.IO;
 
@@ -9,57 +7,40 @@ namespace FirstProject.App.Pattern.Strategy;
 #region Interfaccia
 
 // 1. Strategy: definisce l'interfaccia comune per tutti gli algoritmi
-public interface IStrategyCalculator
+public interface IStrategy
 {
     // Ad esempio, elaborare una lista di numeri in modi diversi
-    double DoOperation(double a, double b);
+    string Prepara(string Descrizione);
 }
 #endregion
 
-#region  Classi per il calcolo
-// 2. ConcreteStrategyAdd: implementa la somma
-public class Sum : IStrategyCalculator
+#region  Strategie concrete - Tipo di cottura
+
+public class Fritto : IStrategy
 {
-    public double DoOperation(double a, double b)
+    public string Prepara(string Descrizione)
     {
-        return a + b;
+        return "Fritto con olio";
     }
 }
 
-// 3. ConcreteStrategySubtract: implementa la sottrazione
-public class Minus : IStrategyCalculator
+public class AlForno : IStrategy
 {
-    public double DoOperation(double a, double b)
+    public string Prepara(string Descrizione)
     {
-        return a - b;
+        return "Al Forno";
     }
 }
 
-// 4. ConcreteStrategyMultiply: implementa la moltiplicazione
-public class Multiply : IStrategyCalculator
+public class AllaGriglia : IStrategy
 {
-    public double DoOperation(double a, double b)
+    public string Prepara(string Descrizione)
     {
-        return a * b;
+        return "Alla griglia";
     }
 }
 
-public class Division : IStrategyCalculator
-{
-    public double DoOperation(double a, double b)
-    {
-        if (b == 0)
-        {
-            Log.Error($"Non è possibile dividere {a} per 0");
-            return 0;
-        }
-        else
-        {
-            return a / b;
-        }
 
-    }
-}
 #endregion
 
 // 5. Context: utilizza una strategia per eseguire l'operazione
